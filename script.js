@@ -1,11 +1,11 @@
-function updatePreview() {
-    const markdownInput = document.getElementById('markdown-input').value;
-    const markdownPreview = document.getElementById('markdown-preview');
-    markdownPreview.innerHTML = marked(markdownInput);
-}
-function toggleDarkMode() {
-    const body = document.body;
-    body.classList.toggle('dark-mode');
-}
+document.addEventListener("DOMContentLoaded", function () {
+    AOS.init();
+    
+    const markdownInput = document.getElementById("markdown-input");
+    const markdownPreview = document.getElementById("markdown-preview");
 
-modeToggle.addEventListener('click', toggleDarkMode);
+    markdownInput.addEventListener("input", function () {
+        const markdownText = markdownInput.value;
+        markdownPreview.innerHTML = marked(markdownText);
+    });
+});

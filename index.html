@@ -5,39 +5,40 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Markdown Editor</title>
     <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+
 </head>
 <body>
-    <div class="container">
-        <h1>Markdown Editor</h1>
-        <div class="split">
-            <div class="editor">
-                <h2>Editor</h2>
-                <textarea id="markdown-input" placeholder="Write your Markdown here..." oninput="updatePreview()"></textarea>
-            </div>
-            <div class="preview">
-                <h2>Preview</h2>
-                <div id="markdown-preview"></div>
-            </div>
+    <div class="container" data-aos="fade-up">
+        <div class="editor-pane">
+            <textarea id="markdown-input" placeholder="Type your markdown here..."></textarea>
         </div>
-        <div class="markdown-info">
-            <h2>Markdown FAQs and Guides</h2>
-            <p>Markdown is a lightweight markup language with plain-text formatting syntax. Learn more:</p>
-            <ul>
-                <li><a href="https://www.markdownguide.org/getting-started/" target="_blank">Getting Started with Markdown</a></li>
-                <li><a href="https://www.markdownguide.org/basic-syntax/" target="_blank">Basic Syntax Guide</a></li>
-                <li><a href="https://www.markdownguide.org/cheat-sheet/" target="_blank">Markdown Cheat Sheet</a></li>
-            </ul>
-            <h2>Video Tutorials</h2>
-            <p>Watch these video tutorials to learn Markdown:</p>
-            <ul>
-                <li><a href="https://www.youtube.com/watch?v=HUBNt18RFbo" target="_blank">Markdown Crash Course</a></li>
-                <li><a href="https://www.youtube.com/watch?v=oyxSerk7aTw" target="_blank">Markdown Tutorial for Beginners</a></li>
-            </ul>
+        <div class="preview-pane">
+            <div id="markdown-preview"></div>
         </div>
     </div>
-    <button id="mode-toggle" class="mode-toggle">🌙</button>
-
-
+    <div class="faq-container" data-aos="fade-up">
+        <h2>Markdown FAQs</h2>
+        <ul>
+            <li><strong>What is Markdown?</strong> Markdown is a lightweight markup language for creating formatted text using a plain-text editor.</li>
+            <li><strong>How do I create a heading?</strong> Use the # symbol followed by a space and the heading text. For example: # Heading 1</li>
+            <li><strong>How do I create a list?</strong> Use dashes (-) or asterisks (*) followed by a space and the list item text.</li>
+            <li><strong>How do I create a link?</strong> Use the following syntax: [Link text](URL)</li>
+            <li><strong>How do I create bold text?</strong> Wrap the text with two asterisks: **bold text**</li>
+        </ul>
+    </div>
+    <div class="video-container" data-aos="fade-up">
+        <h2>Markdown Tutorial Videos</h2>
+        <div class="video">
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/HUBNt18RFbo" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        </div>
+        <div class="video">
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/eLiTgMuw6tQ" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
     <script src="script.js"></script>
 </body>
 </html>
