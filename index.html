@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Markdown Editor</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Markdown Editor</h1>
+        <div class="split">
+            <div class="editor">
+                <h2>Editor</h2>
+                <textarea id="markdown-input" placeholder="Write your Markdown here..." oninput="updatePreview()"></textarea>
+            </div>
+            <div class="preview">
+                <h2>Preview</h2>
+                <div id="markdown-preview"></div>
+            </div>
+        </div>
+        <div class="markdown-info">
+            <h2>Markdown FAQs and Guides</h2>
+            <p>Markdown is a lightweight markup language with plain-text formatting syntax. Learn more:</p>
+            <ul>
+                <li><a href="https://www.markdownguide.org/getting-started/" target="_blank">Getting Started with Markdown</a></li>
+                <li><a href="https://www.markdownguide.org/basic-syntax/" target="_blank">Basic Syntax Guide</a></li>
+                <li><a href="https://www.markdownguide.org/cheat-sheet/" target="_blank">Markdown Cheat Sheet</a></li>
+            </ul>
+            <h2>Video Tutorials</h2>
+            <p>Watch these video tutorials to learn Markdown:</p>
+            <ul>
+                <li><a href="https://www.youtube.com/watch?v=HUBNt18RFbo" target="_blank">Markdown Crash Course</a></li>
+                <li><a href="https://www.youtube.com/watch?v=oyxSerk7aTw" target="_blank">Markdown Tutorial for Beginners</a></li>
+            </ul>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
