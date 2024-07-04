@@ -3,6 +3,8 @@ body {
     margin: 0;
     padding: 0;
     background-color: #f0f0f0;
+    color: #333;
+    transition: background-color 0.3s, color 0.3s;
 }
 
 .container {
@@ -11,24 +13,25 @@ body {
     padding: 20px;
     background-color: #fff;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
 }
 
 h1, h2 {
-    color: #333;
     text-align: center;
+    margin-bottom: 20px;
 }
 
 .split {
     display: flex;
+    gap: 20px;
 }
 
 .editor, .preview {
     flex: 1;
-    margin: 10px;
-    padding: 10px;
-    background-color: #f9f9f9;
+    padding: 20px;
     border: 1px solid #ddd;
     border-radius: 5px;
+    background-color: #f9f9f9;
 }
 
 textarea {
@@ -46,6 +49,7 @@ textarea {
     border: 1px solid #ddd;
     border-radius: 5px;
     min-height: 400px;
+    overflow-y: auto;
 }
 
 .markdown-info {
@@ -53,7 +57,6 @@ textarea {
 }
 
 ul {
-    list-style-type: none;
     padding: 0;
 }
 
@@ -69,3 +72,30 @@ a {
 a:hover {
     text-decoration: underline;
 }
+
+.dark-mode {
+    background-color: #333;
+    color: #fff;
+}
+
+.dark-mode .container {
+    background-color: #222;
+    color: #fff;
+    border-color: #444;
+}
+
+.dark-mode .editor,
+.dark-mode .preview,
+.dark-mode textarea,
+.dark-mode #markdown-preview,
+.dark-mode .markdown-info,
+.dark-mode a {
+    color: #fff;
+    background-color: #444;
+    border-color: #666;
+}
+
+.dark-mode a:hover {
+    color: #88ccff;
+}
+
